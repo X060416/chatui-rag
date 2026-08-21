@@ -121,7 +121,7 @@ xcode-select --install
 ### 第 3 步：部署后端 rag-server
 
 ```bash
-# 拉取代码（后端仓库私有，联系作者获取访问权限）
+# 拉取后端代码（两个仓库都开源，直接克隆）
 git clone https://github.com/X060416/rag-server.git
 cd rag-server
 
@@ -218,4 +218,4 @@ PDF、Word（docx）、Markdown、TXT、图片（自动 OCR 提取文字）。
 ## 📄 License 与致谢
 
 - 本项目基于开源项目 [ChatUI](https://github.com/imelanthirayan/ChatUI) 二次开发，遵循其 [MIT License](./LICENSE)
-- RAG 后端服务为独立仓库（私有），包含文档解析、混合检索、重排序等完整实现，如需访问可联系作者
+- RAG 后端服务也已开源：[rag-server](https://github.com/X060416/rag-server)，包含文档解析、混合检索、重排序等完整实现，可独立部署使用
