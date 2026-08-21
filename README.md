@@ -117,6 +117,9 @@ xcode-select --install
 3. 点左侧 **Developer** → 勾选两个模型 → 点 **Start Server**（默认端口 1234）
 
 > 💡 这一步相当于给系统装上"大脑"。装好后可以打开 `http://localhost:1234` 确认服务已启动。
+>
+> ⚠️ **Apple 芯片用户注意**：后端默认找的模型名是 `qwen3.6-27b-mlx`（`-mlx` 是苹果芯片专用格式），在 Search 里直接搜这个名字下载即可，无需任何配置。
+> **Windows / Linux / Intel 电脑**：LM Studio 里没有 `-mlx` 版本，请下载普通 GGUF 版（如 `qwen3-8b` / `qwen3-14b`），然后按第 3 步最后的说明设置环境变量 `LM_STUDIO_LLM_MODEL=你下载的模型名`。
 
 ### 第 3 步：部署后端 rag-server
 
@@ -131,6 +134,7 @@ source venv/bin/activate        # Windows 用: venv\Scripts\activate
 pip install -r requirements.txt
 
 # 下载重排序模型（约 500MB，只需一次）
+# 作用：检索后对候选片段二次精排打分，让答案更准；不下载系统也能跑，但会降级为普通检索
 python download_model.py
 
 # 启动！
