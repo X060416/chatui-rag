@@ -1,0 +1,33 @@
+# ChatUI
+
+> A customizable, self-hosted chat interface built with Next.js that connects to any LLM backend (Azure OpenAI, OpenAI, Ollama, LM Studio, or a custom API). It offers real-time streaming, multi-provider routing, and a fully themeable UI configured from a single file.
+
+ChatUI is a ChatGPT-style frontend that developers and teams fully own and control. All branding, theming, authentication, and backend routing live in `app/chat.config.ts`. Data is stored on the local filesystem (JSON + Markdown) with no third-party services. Released under the MIT License.
+
+## Documentation
+
+- [README](README.md): Overview, features, quick start, screenshots, and tech stack.
+- [Configuration Guide](CONFIGURATION.md): Full reference for theme, branding, endpoints, API keys, users, environment variables, and storage.
+- [Agent Notes](AGENTS.md): Conventions for AI agents working in this repository.
+
+## Key Features
+
+- Multi-provider support: Azure OpenAI, OpenAI, Ollama, LM Studio, or custom backends.
+- Streaming responses with token-by-token display and a stop button.
+- Per-option system prompts and endpoint routing.
+- Full GitHub-Flavored Markdown rendering with code copy buttons.
+- Configurable theme, branding, welcome screen, and suggestion chips.
+- Built-in username/password authentication.
+- File-based chat storage (per user).
+
+## Getting Started
+
+- Install dependencies: `npm install`
+- Start the dev server: `npm run dev`
+- Open http://localhost:3000 and sign in with the configured credentials.
+
+## Tech Stack
+
+- Next.js 16 (App Router), TypeScript, Tailwind CSS 4
+- react-markdown + remark-gfm
+- File-based storage (JSON + Markdown)

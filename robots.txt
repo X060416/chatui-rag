@@ -1,0 +1,13 @@
+# robots.txt for ChatUI
+# ChatUI is an authenticated chat application. By default we ask crawlers
+# not to index app routes or the API. Adjust to suit your deployment.
+
+User-agent: *
+Disallow: /api/
+Disallow: /login
+
+# To allow public indexing of your deployment, replace the block above with:
+# User-agent: *
+# Allow: /
+
+# Sitemap: https://your-domain.example/sitemap.xml
